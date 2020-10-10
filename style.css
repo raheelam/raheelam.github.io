@@ -1,0 +1,67 @@
+body{
+    background: gray;
+  }
+  div{
+    width: 60%;
+    margin: auto;
+    /*background: purple; */
+     font-family: arial; 
+    padding: 30px;
+    text-align: center;
+   
+  }
+#survey-form{
+    max-width:100%;
+    margin: auto;
+    background: lightgray;
+    text-align: left;
+    padding: 40px;
+    font-size: 20px;
+    border-radius: 5px;
+    
+  }
+  [type ="text"], textarea, select, #submit, #email, #number{
+    width: 100%; 
+  /*border: 2px solid gray; */
+    border:none;
+    padding: 4px;
+    border-radius: 3px;
+  }
+  [type ="text"], textarea, select, [type="checkbox"], [type="radio"],#email, #number{
+    margin-top: 10px;
+  }
+  
+  [type ="text"], #email, #number{
+    height: 20px;
+  }
+  select{
+  height: 30px;
+    width: 101%;
+  }
+  #submit{
+  height: 40px;
+    width: 102%;
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+    background: green;
+  }
+  #description{
+    /*margin-bottom: 0px; */
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  span{
+    font-size: 16px;
+    
+  }
+  #title{margin: 0px;}
+  .default_select{
+    color: gray;
+  }
+  @media (max-width: 1020px) {
+      div{
+          width: 80%;
+          
+      }
+  }
