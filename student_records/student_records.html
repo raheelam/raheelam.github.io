@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javascript challenge1</title>
+        <style>
+            h1,body,form,input,label,p,div,button,hr{
+                padding: 0px;
+                margin: 0px;
+            }
+           html{
+               font-size: 40px;
+           }
+            label{
+                display: block;
+            }
+            .container{
+                 
+               /* max-width: 40%; */
+               
+                max-width: 60%;
+                margin: 20px auto;
+                
+                font-size: 24px;
+                font-family: arial;
+            }
+            #students{
+                padding: 20px;
+           /*   
+                padding: 20px;
+                max-width: 60%;
+                float:right;
+             */
+            }
+            form{
+               
+                padding:10px 40px;
+                margin-bottom: 20px;
+            }
+            form input{
+                width: 99%;
+               height: 26px;
+               font-size: 0.8em;
+               margin: 8px 0px;
+               padding: 6px 0px;
+              
+            }
+            #submit{
+                width: 100%;
+                font-family: arial;
+                height: 40px;
+                background: green;
+            }
+            h1,p{
+                text-align: center;
+            }
+           
+            #addStudent{
+                display: none;
+                position: fixed;
+                top: 20px;
+                right: 3%;
+                width: 15%;
+                
+                font-size: 0.8em;
+            }
+            
+          
+        </style>
+    </head>
+    <body>
+       
+            <form class="container" id="form" >
+                <h1>Add a new student</h1>
+                <label for="name">Name:</label>
+                <input id ="name" type="text" name="name" placeholder="Enter student's name"/>
+                <label for="track">Track:</label>
+                <input id="track" name="track" type="text" placeholder="Enter student's track e.g web design">
+                <label for="achievements">Number of Achievements:</label>
+                <input id="achievements" name="achievements" type="number" placeholder="Enter number of achievements">
+                <label for="points">Number of points:</label>
+                <input type="number" name="points" id="points" placeholder="Enter student points"><br>
+                <input type="button" id="submit" value="Add student" onclick="addStudent()">
+               
+            </form>
+        
+        <div  class="container">
+        <div id="students">
+            <p>List of Students in Records</p>
+            <button id="addStudent" onclick="formPage()" >+ Add Student</button>
+        </div>
+    </div>
+        <script>
+            var students = [];
+            studentsInfo = (arr) =>{
+
+            }
+            addStudent = () => {
+              let student = {};
+              student.name = document.getElementById("name").value;
+              student.track = document.getElementById("track").value;
+              student.achievements = document.getElementById("achievements").value;
+              student.points = document.getElementById("points").value;
+
+              students.push(student);
+              document.getElementById("form").style.display = "none";
+              showStudents(students.length);
+              document.getElementById("addStudent").style.display = "block";
+             // document.getElementById("addStudent").style.position = "fixed";
+            
+            }
+            showStudents = (length) =>{
+                //for(let i=0; i<students.length; i++){
+                   // let stud = students[i];
+                   //len = (parseInt(length) - 1) ;
+                   let i = length-1;
+                    for(let v in students[i]){
+                        document.getElementById("students").innerHTML += " </br>" +  v +" : "+ students[i][v];
+
+                    }
+               // }
+                document.getElementById("students").innerHTML += "<hr>";
+                //document.createElement("hr");
+            }
+
+            formPage = () =>{
+              document.getElementById("form").style.display = "block";
+              document.getElementById("addStudent").style.display = "none";
+              document.getElementById("addStudent").style.position = "none";
+            }
+          
+          
+        </script>
+    </body>
+</html>

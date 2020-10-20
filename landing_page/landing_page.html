@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Landing Page</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <style>
+            body,h1,p,div,form,li,ul,header,main{
+                margin: 0px;
+                padding: 0px;
+            }
+            body{
+            font-family: arial;
+            max-width: 100%;
+            background:white;
+            }
+            ul{
+                display: flex;
+                list-style: none;
+                flex-flow: row;
+               
+               flex:auto;
+            }
+            li{
+                flex:auto;
+                padding: 6px;
+                
+               height: 21px;
+                background: white;
+            }
+            #header{
+                width: 100%;
+                display: flex;
+                
+                /*justify-content:space-between; */
+                flex-direction: row;
+                height: 70px;
+                background: white;
+                
+                margin-bottom: 10px; /* 10px */
+                position: fixed;
+                top: 0;
+               
+               
+                
+            }
+           
+           h1, #nav-bar{
+            flex: auto;
+                display: flex;
+                margin: 0px 0px 0px 10px;
+                
+               margin-bottom: 0px;
+                height: 30px;
+            }
+            
+            #nav-bar{
+                /*float: right;*/
+                padding: 20px;
+                
+                background: white;
+                
+            }
+            h1{
+                font-size: 30px;
+               /* float: left; */
+                padding: 20px;
+            }
+            .nav-link{
+              
+              font-size: 20px;
+              padding: 6px 20px 5px 20px; 
+              padding-left: 30px;
+              margin: 0px;
+              
+              height: 30px;
+              text-decoration: none;
+              color: black;
+            }
+           
+            .nav-link:active{
+               background:gray;
+               color: white;
+            }
+            
+           /* .nav-link:visited{
+                color: red;
+            }*/
+            .nav-link:hover{
+                background: gray;
+            }
+
+            form{
+   width: 80%;
+    margin: auto;
+   text-align: center;
+  
+}
+[type="email"]{
+   width:360px;
+   padding: 6px;
+
+   
+  
+    
+}
+       #search-h{
+           padding: 10px 0px 16px 0px;
+           
+           margin: 0px;
+       
+           width: 100%;
+          font-size: 26px;
+           height: auto;
+           display: block;
+       }    
+       hr{
+           margin: 0px 16px 70px  16px;
+           position:sticky;
+           top:60px;
+       }
+
+
+
+       #pro-div{
+        display: flex;
+           flex-direction: row;
+           flex-wrap: wrap;
+           justify-content: space-between;
+          
+       }
+       .products{
+           border: 1px solid black;
+           border-radius: 5px;
+           width: 26%;
+           padding: 16px;
+           margin-bottom: 24px;
+          text-align: center;
+           height:360px;
+          
+       }
+       .product-img{
+           height: 160px;
+           margin: 16px;
+           width: 60%;
+       }
+       .product-price span, .product-desc span, .product-name{
+            font-weight: bolder;
+            
+       }
+       .product-price{
+           margin: 16px;
+       }
+
+
+
+       #submit{
+        height: 36px;
+    width: 140px;
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight:bolder;
+    border: 2px solid black;
+    border-radius: 3px;
+    background: gray;
+       }
+
+       #submit:hover{
+       color: rgb(219, 215, 215);
+      
+
+       }
+       #submit:active{
+        border: 2px solid rgb(27, 22, 22);
+        background: rgb(24, 31, 31);
+        color: rgb(219, 215, 215);
+        /*color: rgb(160, 153, 153); */
+      
+       }
+         
+       section{
+           margin: 20px;
+           border: 2px solid gray;
+           padding: 10px ;
+           height: 600px;
+           
+       }
+
+       
+            @media (max-width: 900px){
+                                                                                                                                                 .products{
+                    width: 40%;
+                }
+                #header{
+               display: flex;
+               height: 70px;
+               
+           }
+           hr{
+               top: 50px;
+               margin-bottom: 70px;
+           }
+            #nav-bar{  flex: 55%;
+            
+            padding: 20px;
+        flex-wrap:nowrap;
+        
+        
+        
+        }
+        li{
+            padding: 4px;
+        }
+        
+              /*  h1, #nav-bar{
+                display: flex;
+                margin: 10px;
+                padding: 0px;
+                
+                background: red;
+               
+                height: 30px;
+            } */
+           
+            .nav-link{
+              font-size:16px;
+              /*padding: 10px 10px 10px 10px ;
+              
+              height: 20px;*/
+              margin: 0px;
+             
+              padding: 4px 8px 8px 8px;
+              text-decoration: none;
+              color: black;
+            }
+            
+           h1{
+               font-size: 20px;
+               flex: 45%;
+               padding: 20px;
+              
+            flex-wrap:nowrap;
+              /* margin-bottom: 0px;
+               padding-top: 10px; */
+           }
+           
+            }
+            @media (max-width: 620px){
+                .products{
+                    width: 90%;
+                }
+                #header{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction:row;
+               height:50px;
+               
+              
+               
+           }
+           hr{
+               top: 40px;
+               margin-bottom: 50px;
+           }
+           li{
+            padding: 4px 0px 4px 0px;
+             flex:auto;
+            
+             margin: 0px;
+              
+        
+        /*flex:initial;*/
+       /* background: green; */
+               
+            }
+            ul{
+                height: 96px;
+                 
+               
+                /* background: orange;
+                 justify-content:end;
+                 */
+                
+               
+               
+            }
+            .nav-link{
+                justify-content: center;
+              font-size: 14px;
+            
+             
+              padding: 4px 10px 8px 10px;
+              
+            
+              margin: 10px 0px 0px 0px ;
+           text-align: center;
+              text-decoration: none;
+              color: black;
+            }
+           
+            #nav-bar{
+                /*flex: 50%;*/
+                
+               justify-content:right;
+               
+                /* j */
+                margin: 0px ;
+              /* background: red; */
+                
+            padding: 10px 10px 10px 10px ;
+        flex-wrap:nowrap;
+            }
+           h1{
+            /*flex: 30%;
+         justify-content:center; */
+         
+         
+         /* h */
+         /* background: red; */
+         justify-content:left;
+         padding: 16px 0px 0px 0px;
+            text-align: center;
+            flex-wrap:nowrap;
+               margin: 0px 0px 6px 10px;
+               font-size: 14px;
+           }
+           p{
+               word-wrap:break-word;
+           }
+           #header-img{
+               height: 16px;
+           }
+           #search-h{
+               font-size: 20px;
+           }
+           [type="email"]{
+   width:260px;
+  
+  
+    
+}
+
+            }
+            section{
+           margin-top: 10px;
+           border: none;
+           padding: 10px ;
+           width: 70%;
+           margin: auto;
+           padding-top: 70px; /* 50px for small */
+           height:600px;
+           
+       }
+       footer{
+           height: 20px;
+           background: gray;
+           position: fixed;
+         width: 16%;
+         float: right;
+        right: 0;
+         text-align: center;
+         font-weight: bolder;
+          bottom: 0;
+       }
+    
+       
+        </style>
+    </head>
+    <body>
+        <header id="header">
+            <h1><img id="header-img" width="40px" height="26px" src="https://i.ytimg.com/vi/2QGSWWwROcY/maxresdefault.jpg"/> COCO AND BELLE</h1>
+            <nav id="nav-bar">
+                <ul>
+                   <li><a href="#features" class="nav-link">Features</a></li>
+           <li> <a href="#how-tw" class= "nav-link">How It Works</a> </li>
+               <li> <a href="#pricing" class="nav-link">Pricing</a> </li>
+                </ul>
+            </nav>
+        </header>
+       <hr>
+        <main>
+        <div>
+            <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
+
+                <h1 id="search-h">Handcrafted, home-made masterpieces</h1><br/>
+                <input id="email" type="email" placeholder="Enter your Email"/><br/>
+                <input id="submit" value="GET STARTED" type="submit" />
+            </form>
+          
+        </div>
+
+        <section id="features">
+            <h2>Features</h2>
+            <p>friends tell me im can i feel it too? i dont want to be right if missing you is so wrong. it hits me like a tsunami taking over my body. all of my friends take me out and it wont feel right im sad tonight sad tonight sad tonight and it feels so right. all over my mind now tryna find a new muse i pretend that im fine but it hits me like a tsunami taking over my body. so let me be sad tonight sad tonight sad tonight. im sad tonight sad tonight sad tonight and it feels so right it feels so right yeajh</p>
+        </section>
+        <section id="how-tw">
+            <h2>How it works</h2>
+           
+           <p align="center"><iframe center="" width="96%" height="470px" src="https://www.youtube.com/embed/bhxhNIQBKJI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+        </section>
+        <section id="pricing">
+            <h2>Pricing</h2>
+            <div id="pro-div">
+          <div class="products">
+              <p class="product-name">Product No.1</p>
+              <img class="product-img">
+              <p class="product-price"><span>Price: </span>$300</p>
+              <p class="product-desc"><span>Description: </span>blah blah blah blah blah blah blah blah blah blah</p>
+          </div>
+          <div class="products">
+            <p class="product-name">Product No.2</p>
+            <img class="product-img">
+            <p class="product-price"><span>Price: </span>$200</p>
+            <p class="product-desc"><span>Description: </span>blah blah blah blah blah blah blah blah blah blah</p>
+          </div>
+          <div class="products">
+            <p class="product-name">Product No.3</p>
+            <img class="product-img">
+            <p class="product-price"><span>Price: </span>$100</p>
+            <p class="product-desc"><span>Description: </span>blah blah blah blah blah blah blah blah blah blah</p>
+          </div>
+        </div>
+        </section>
+        
+    </main>
+    <footer>Rahila Ilegbodu &copy;</footer>
+    <script>
+        alert(screen.width+' x'+screen.height);
+    </script>
+    </body>
+</html>
