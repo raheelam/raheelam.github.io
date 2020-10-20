@@ -103,6 +103,9 @@
 
               students.push(student);
               document.getElementById("form").style.display = "none";
+              
+              document.getElementById("form").reset();
+
               showStudents(students.length);
               document.getElementById("addStudent").style.display = "block";
              // document.getElementById("addStudent").style.position = "fixed";
